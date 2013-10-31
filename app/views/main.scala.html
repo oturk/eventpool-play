@@ -1,0 +1,48 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/calendar.js")" ></script>
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/eventpool.js")" ></script>
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/tile.js")" ></script>
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/calendar.css")"/>
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/eventpool.css")"/>
+		<script type="text/javascript">
+			// $(document).ready(function(){
+			// for (var i = 0; i<5; i++){
+			// console.log("try " + i);
+			// }
+			// });
+			$(document).ready(initCalendar);
+			// $(document).ready(initEventRoll);
+			//var eventpool = new EventPool();
+			//$(document).ready(eventpool.init);
+			$(document).ready(EventPool.init);
+			//console.log(EventPool.toString());
+			console.log(new Date(2012,9,15).toDateString());
+		</script>
+		<title>index</title>
+	</head>
+	<body>
+		<div id="content" >
+			<div id="calendar">
+				<div id="event_pool"></div>
+				<div id="pictures_of_events"></div>
+				<div id="control_bar"></div>
+				<div id="dayHeaders"></div>
+				<div id="calendar_days"></div>
+			</div>
+		</div>
+		<!-- <div id="dialog" title="Basic dialog">
+			<p>
+				This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.
+			</p>
+		</div> -->
+	</body>
+</html>

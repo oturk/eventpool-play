@@ -1,0 +1,54 @@
+#calendar,
+#control_bar{
+	width: 630px;
+	/*border: 1px solid black;*/
+	margin: 0 0 0 50px;
+}
+
+div.calendar_day,
+div.days_heads,
+div.prev_day,
+div.next_day,
+div.inactive_day,
+div.today{
+	width: 80px;
+	border: 1px solid black;
+	margin: 2px;
+	padding: 2px;
+	border-radius: 10px;
+	display: inline-block;
+}
+
+div.calendar_day,
+div.prev_day,
+div.next_day,
+div.inactive_day,
+div.today{
+	height: 80px;
+}
+
+div.days_heads{
+	height: 20px; 	
+}
+
+div.inactive_day{
+	background-color: #A7A196;
+}
+
+div.today{
+	border: 1px solid blue;
+}
+
+#control_bar{
+	margin: 0;
+	text-align: center;
+}
+#control_bar div{
+	display: inline-block;
+	margin: 5px;
+}
+
+.overtopSelectedDay{
+	transform: scale(4,4);
+	background-color: red;
+}
